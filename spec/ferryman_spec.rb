@@ -10,6 +10,9 @@ describe "ferryman" do
     def sum(a, b)
       a + b
     end
+    def even(n)
+      n.even?
+    end
     def long
       sleep(2)
     end
@@ -28,6 +31,8 @@ describe "ferryman" do
     end
     sleep(10)
 
+    expect(client.call(:even, 3)).to eql(false)
+    expect(client.call(:even, 2)).to eql(true)
     expect(client.call(:sum, 1, 2)).to eql(3)
     expect(client.cast(:sum, 1, 2)).to eql(1)
     expect(client.multicall(:sum, 1, 2)).to eql([3])

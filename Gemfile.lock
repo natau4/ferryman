@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/netDalek/json-rpc-objects.git
-  revision: 6ff3067c48caca06c0cea85e6094b3455b595f98
+  revision: 87b3aae6fe1c1f3c756bc92f68307203bda4b4d6
   specs:
     json-rpc-objects (0.4.3)
       abstract (>= 1.0.0)
