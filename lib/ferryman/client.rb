@@ -33,7 +33,8 @@ module Ferryman
         _key, raw_response = @redis.blpop(key, timeout: @timeout)
         raise Timeout::Error, "timeout for method #{method} with arguments #{arguments}" if raw_response.nil?
         response = JsonRpcObjects::Response.parse(raw_response)
-        response.result || raise(Ferryman::Error.new(response.error))
+        raise(Ferryman::Error.new(response.error)) if response.error
+        response.result
       end
     end
 
