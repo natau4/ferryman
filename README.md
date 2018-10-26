@@ -1,11 +1,11 @@
 # Ferryman
 
 This is RPC realisation for Ruby and Erlang. It uses redis and JSON-RPC prothocol.
-It uses redis pub/sub to send reqests and redis list for responses.
+It uses Redis pub/sub to send reqests and Redis list for responses.
 
 It supports only JSON-RPC 2.0 version.
 
-You should remember that all data serialized to json, so all symbols and atoms become strings and binary.
+You should remember that all data serialized to JSON, so all symbols and atoms become strings and binary.
 
 ## Ruby
 
