@@ -10,3 +10,6 @@ deps
 .eunit
 _build
 erl_crash.dump
+
+.idea
+*.iml
