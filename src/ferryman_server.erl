@@ -1,5 +1,7 @@
 -module(ferryman_server).
 
+-include_lib("kernel/include/logger.hrl").
+
 -export([
          start_link/5,
          put_reply/3
@@ -49,6 +51,7 @@ handle_call(_Msg, _From, St) ->
     {stop, error, St}.
 
 handle_info({message, _Channel, Message, _Pid}, St) ->
+  ?LOG_ERROR("test"),
   error_logger:info_msg("ferryman_server receive message ~s", [Message]),
   Self = self(),
   spawn_link(fun() -> handle_request(Self, Message, St#st.handler) end),

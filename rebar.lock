@@ -1,0 +1,12 @@
+{"1.1.0",
+[{<<"eredis">>,{pkg,<<"eredis">>,<<"1.2.0">>},0},
+ {<<"jiffy">>,{pkg,<<"jiffy">>,<<"1.0.1">>},0},
+ {<<"jsonrpc2">>,
+  {git,"https://github.com/funbox/jsonrpc2-erlang",
+       {ref,"7696abefe55f5c81157173f29d096ab923d04374"}},
+  0}]}.
+[
+{pkg_hash,[
+ {<<"eredis">>, <<"0B8E9CFC2C00FA1374CD107EA63B49BE08D933DF2CF175E6A89B73DD9C380DE4">>},
+ {<<"jiffy">>, <<"4F25639772CA41202F41BA9C8F6CA0933554283DD4742C90651E03471C55E341">>}]}
+].
