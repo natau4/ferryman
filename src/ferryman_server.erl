@@ -49,7 +49,7 @@ handle_call(_Msg, _From, St) ->
     {stop, error, St}.
 
 handle_info({message, _Channel, Message, _Pid}, St) ->
-  error_logger:info_msg("ferryman_server receive message ~s", [Message]),
+  error_logger:info_msg("ferryman_server receive message ~ts", [Message]),
   Self = self(),
   spawn_link(fun() -> handle_request(Self, Message, St#st.handler) end),
   eredis_sub:ack_message(St#st.sub),
