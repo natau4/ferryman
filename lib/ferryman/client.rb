@@ -13,7 +13,7 @@ module Ferryman
     end
 
     def servers_count
-      redis.client.call([:pubsub, :numsub, channel]).last.to_i
+      redis.call([:pubsub, :numsub, channel]).last.to_i
     end
 
     def queue
